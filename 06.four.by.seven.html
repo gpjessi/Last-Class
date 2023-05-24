@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>request column</title>
+</head>
+<body>
+
+    <canvas id = "sketch" width="600" height="600"></canvas>  
+
+    <script>
+        var sketch = document.getElementById("sketch");
+        var context = sketch.getContext("2d");
+
+        context.fillStyle = "#A9F50C"; // some shade of green
+
+        for ( var r = 1; r <=7; r++) {
+
+            //this is the Outer loop (a column of 7 things; vertical dimensions; the # of rows )
+
+            for (var c = 1; c <= 4; c++) {
+                // the inner loop; its the rows 
+                context.beginPath();
+                context.arc((c * 50)(r * 50), 20, 0, 2 * Math.PI, true);
+                // use r todefine the y 
+                context.closePath();
+                context.fill();
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
